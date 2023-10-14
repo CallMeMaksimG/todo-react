@@ -4,7 +4,7 @@ import styles from './TodoList.module.css';
 function TodoList({ todos, deleteTodo, toggleTodo }) {
     if(!todos.length) {
         return (
-            <div>
+            <div className={styles.todoListContainer}>
                 <h2>Todo list is empty</h2>
             </div>
         )
