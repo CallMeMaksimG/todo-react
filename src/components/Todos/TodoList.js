@@ -1,7 +1,7 @@
 import Todo from './Todo';
 import styles from './TodoList.module.css';
 
-function TodoList({ todos, deleteTodo }) {
+function TodoList({ todos, deleteTodo, toggleTodo }) {
     if(!todos.length) {
         return (
             <div>
@@ -11,7 +11,7 @@ function TodoList({ todos, deleteTodo }) {
     } else {
         return (<div className={styles.todoListContainer}>
             {todos.map((todo) => (
-                <Todo key={todo.id} todo={todo} deleteTodo={deleteTodo} />
+                <Todo key={todo.id} todo={todo} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
             ))}
         </div>)
     }
